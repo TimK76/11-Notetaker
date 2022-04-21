@@ -14,6 +14,10 @@ app.get('/api/db', (req, res) => {
     res.json(results);
 });
 
+app.get('api/db:id', (req, res) => {
+    const result = findById(req.params.id, db);
+    res.json(result);
+});
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
