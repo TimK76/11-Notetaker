@@ -7,20 +7,17 @@ const app = express();
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-// function filterByQuery(query, dbArray) {
-//     let filteredResults = dbArray;
 
-// })
 app.get('/', (req, res) => {
     console.log(__dirname)
     res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
-app.get('/public/notes.html', (req, res) => {
+app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
-app.get('/public/notes.html.:id', (req, res) => {
+app.get('*', (req, res) => {
     const result = findById(req.params.id, db);
     res.sendFile(result);
 });
