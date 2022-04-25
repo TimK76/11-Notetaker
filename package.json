@@ -4,24 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TimK76/11-Notetaker.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/TimK76/11-Notetaker/issues"
-  },
-  "homepage": "https://github.com/TimK76/11-Notetaker#readme",
-  "devDependencies": {
-    "jest": "^27.5.1"
+    "express": "^4.16.4"
   }
 }
