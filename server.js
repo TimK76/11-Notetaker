@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const { v4: uuidv4 } = require('uuid');
+uuidv4();
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -10,7 +12,9 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 app.use(express.static('public'));
 
+// get JSON
 app.use('/api', apiRoutes);
+// get HTML
 app.use('/', htmlRoutes);
 
 app.listen(PORT, () => {
