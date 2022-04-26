@@ -6,7 +6,6 @@ let noteList;
 
 const { v4: uuidv4 } = require('uuid');
 uuidv4();
-
 if (window.location.pathname === '../../notes.html') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -86,8 +85,8 @@ const handleNoteDelete = (e) => {
   e.stopPropagation();
 
   const note = e.target;
-  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
-
+  // const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+  const noteId = uuidv4();
   if (activeNote.id === noteId) {
     activeNote = {};
   }
