@@ -6,6 +6,7 @@ let noteList;
 
 const { v4: uuidv4 } = require('uuid');
 uuidv4();
+
 if (window.location.pathname === '../../notes.html') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');

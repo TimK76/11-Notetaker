@@ -10,7 +10,7 @@ router.get('../public/notes.html', (req, res) => {
     res.send('../db/db.json')
 })
 router.post('../lib/notes.js', (req, res) => {
-    res.writefile
+    res.fs.writeToFile
 })
 
 
